@@ -4,6 +4,7 @@ import fs from "fs"
 // console.log(process.argv[2])
 
 
+// argv = Argument Vector.
 const action = process.argv[2]
 const fileName = process.argv[3]
 const fileData = process.argv[4]
