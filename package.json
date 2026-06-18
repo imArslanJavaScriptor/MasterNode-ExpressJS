@@ -1,0 +1,27 @@
+{
+  "name": "masternode-expressjs",
+  "version": "1.0.0",
+  "description": "Node & Express Js Mastery",
+  "keywords": [
+    "Node",
+    "Express"
+  ],
+  "homepage": "https://github.com/imArslanJavaScriptor/MasterNode-ExpressJS#readme",
+  "bugs": {
+    "url": "https://github.com/imArslanJavaScriptor/MasterNode-ExpressJS/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imArslanJavaScriptor/MasterNode-ExpressJS.git"
+  },
+  "license": "ISC",
+  "author": "Muhammad Arslan",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.18.0"
+  }
+}
