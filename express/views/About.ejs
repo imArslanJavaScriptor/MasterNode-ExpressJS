@@ -6,13 +6,13 @@
     <title>About Page</title>
 </head>
 <body>
-    <%- include('common/navbar') %>
+    <%- include('common/Navbar') %>
     <h1>About Page</h1>
-    <p>Id: <%=userInfo.id %></p>
-    <p>Name: <%=userInfo.name %></p>
+    <p><%= userInfo.id %></p>
+    <p><%= userInfo.name %></p>
     <ul>
         <% userInfo.favHobbies.forEach((item) => { %>
-            <li><%= item %></li>
+            <li><%= item%></li>
         <% }) %>
     </ul>
 </body>
