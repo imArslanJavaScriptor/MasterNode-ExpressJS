@@ -1,19 +1,13 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose")
 
 const connectDB = async () => {
   try {
-    // Adding return ensures the resolved connection promise passes back to startServer
-    const conn = await mongoose.connect(process.env.MONGO_URI);
-    console.log(`MongoDB Connected: ${conn.connection.host}`);
-    return conn;
+    const connection = await mongoose.connect(`YOUR_MONGODB_URI`)
+    console.log("DB Connect Successfully")
   } catch (error) {
-    console.error(`Error connecting to MongoDB: ${error.message}`);
-    process.exit(1); 
+    console.log("Connection Failed", error.message)
+    
   }
-};
+}
 
-module.exports = connectDB;
-
-// If you want to debug here, put it inside a function or log it after dotenv loads.
-// To safely log it here for debugging purposes:
-// console.log("URI Check inside file:", process.env.MONGO_URI);
+module.exports = connectDB
