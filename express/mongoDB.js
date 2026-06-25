@@ -1,5 +1,8 @@
 const express = require('express');
 const connectDB = require("./db/db_connection")
+const dotenv = require("dotenv").config()
+
+const PORT = process.env.PORT
 
 const app = express()
 
@@ -16,6 +19,6 @@ const addUser = async () => {
 
 addUser()
 
-app.listen(3000, () => {
-  console.log("App is Listening on PORT:3000")
+app.listen(PORT, () => {
+  console.log(`App is listening on PORT:${PORT}`)
 })
