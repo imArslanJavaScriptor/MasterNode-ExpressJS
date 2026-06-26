@@ -14,10 +14,10 @@ connectDB();
 const addEmployee = async () => {
     try {
         await Employee.create({
-            name: "Muhammad Arslan",
-            email: "arslan@king.com",
-            position: "Software Engineer",
-            department: "IT" // Fixed the spelling typo here
+            name: "Ali Zafar",
+            email: "ali@zafar.com",
+            position: "Singer/Actor",
+            department: "Entertainment" // Fixed the spelling typo here
         });        
         console.log("Employee added successfully!");
     } catch (error) {
