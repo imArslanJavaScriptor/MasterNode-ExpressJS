@@ -1,0 +1,141 @@
+/* --- RESET & VARIABLES --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --bg-main: #0f172a;       /* Deep Dark Slate */
+  --bg-card: #1e293b;       /* Lighter Slate for containers */
+  --text-primary: #f8fafc;  /* Near White */
+  --text-muted: #94a3b8;    /* Muted Gray */
+  --primary-color: #6366f1; /* Indigo accents */
+  --success-color: #10b981; /* Green for completed */
+  --danger-color: #ef4444;  /* Red for delete */
+  --border-color: #334155;  /* Subtle borders */
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+/* --- APP CONTAINER --- */
+.app-container {
+  width: 100%;
+  max-width: 550px;
+  background-color: var(--bg-card);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-color);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+  color: var(--text-primary);
+}
+
+/* --- FORM & INPUTS --- */
+.todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 12px 16px;
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.todo-input:focus {
+  border-color: var(--primary-color);
+}
+
+/* --- BUTTONS --- */
+.btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-primary { background-color: var(--primary-color); color: #fff; }
+.btn-success { background-color: var(--success-color); color: #fff; }
+.btn-danger { background-color: var(--danger-color); color: #fff; }
+.btn-edit { background-color: #eab308; color: #000; } /* Yellow for edit */
+
+/* --- TODO LIST ITEMS --- */
+.todo-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px;
+  background-color: var(--bg-main);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.todo-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+/* Custom Styled Checkbox */
+.checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--success-color);
+}
+
+.todo-text {
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  word-break: break-word;
+}
+
+.todo-text.completed {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.action-buttons .btn {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
