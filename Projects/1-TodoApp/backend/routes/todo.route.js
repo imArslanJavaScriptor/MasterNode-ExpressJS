@@ -16,6 +16,8 @@ router.get("/", async (req, res) => {
 
 // POST/api/todos
 // Create a new todo
+// POST /api/todos
+// Create a new todo
 router.post("/", async (req, res) => {
   const { title } = req.body;
   if (!title) {
@@ -23,8 +25,12 @@ router.post("/", async (req, res) => {
   }
   try {
     const newTodo = await TodoModel.create({ title });
+    
+    // ✅ FIX: Send the newly created document back to the client with HTTP 201 (Created) status
+    return res.status(201).json(newTodo);
+    
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    return res.status(400).json({ message: error.message });
   }
 });
 
